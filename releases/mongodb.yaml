@@ -6,17 +6,17 @@ metadata:
   namespace: demo
   annotations:
     fluxcd.io/automated: "false"
-    fluxcd.io/tag.chart-image: semver:~4.0
+    fluxcd.io/tag.chart-image: semver:~4.4
 spec:
   releaseName: mongodb
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com/
+    repository: https://charts.bitnami.com/bitnami/
     name: mongodb
-    version: 7.6.3
+    version: 10.0.5
   values:
     image:
       repository: bitnami/mongodb
-      tag: 4.0.13
+      tag: 4.4.2
     usePassword: false
     persistence:
       enabled: false
